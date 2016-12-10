@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+
+<div id="dat"></div>
+
+
+<script>
+
+ var excel = new ActiveXObject("Excel.Application");
+ var excel_file = excel.Workbooks.Open("C:\\Users\\Adam.M.Allard\\Desktop\\temp\\alphaRoster.xlsx");
+ var excel_sheet = excel.Worksheets("Sheet1");
+ var data = excel_sheet.Cells(1,1).Value;
+
+console.log(data);
+document.getElementById("dat").innerHTML = data;
+
+</script>
+
+
+</body>
+</html>
